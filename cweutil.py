@@ -65,7 +65,7 @@ def main():
 		name = weakness.attrib['Name']
 		pcwelist = []
 		node = 'xmlns:Related_Weaknesses/'
-		leaf = 'xmlns:xmlns:Related_Weakness'
+		leaf = 'xmlns:Related_Weakness'
 		id_type = 'CWE_ID'
 		if args.capec:
 			node = 'xmlns:Related_Attack_Patterns/'
