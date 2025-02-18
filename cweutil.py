@@ -43,22 +43,21 @@ def getArgs():
 	return argparser.parse_args()
 
 def main():
+	global nvdview
 	args = getArgs()
 
 	cwe_path = os.path.dirname(os.path.abspath(__file__)) + '/cwec.xml'
 	if args.capec:
 		cwe_path = os.path.dirname(os.path.abspath(__file__)) + '/capec.xml'
+		nvdview = []
 	if not os.path.isfile(cwe_path):
 		print('CWE: Download https://cwe.mitre.org/data/xml/cwec_latest.xml.zip, then extract it as cwec.xml.')
 		print('CAPEC: Download https://capec.mitre.org/data/xml/capec_latest.xml, then place it as capec.xml.')
 		sys.exit()
 	tree = ET.parse(cwe_path)
 	root = tree.getroot()
-	ns = {'xmlns':'http://cwe.mitre.org/cwe-6'}
-	if args.capec:
-		ns = {'xmlns':'http://capec.mitre.org/capec-3'}
-		global nvdview
-		nvdview = []
+	xmlns = root.tag.split('}')[0].strip('{')
+	ns = {'xmlns':xmlns}
 
 	for weakness in root[0]:
 		id = weakness.attrib['ID']
