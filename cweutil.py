@@ -33,6 +33,10 @@ def children(cwe, space=''):
 		for child in cwedic[cwe]['parentof']:
 			printcwe(child, space + ' ')
 
+def list():
+	for item in cwedic.keys():
+		printcwe(item)
+
 def getArgs():
 	usage = 'python3 {} options'.format(__file__)
 	argparser = ArgumentParser(usage=usage)
@@ -40,6 +44,8 @@ def getArgs():
 	argparser.add_argument('-c', '--children', nargs='?', type=str, dest='children', help='show children of the CWE ID')
 	argparser.add_argument('-k', '--keyword', nargs='?', type=str, dest='keyword', help='search by the keyword')
 	argparser.add_argument('-a', '--capec', action='store_true', dest='capec', help='use capec mode')
+	argparser.add_argument('-u', '--cuue', action='store_true', dest='CuuuuuuE', help='use cuue mode')
+	argparser.add_argument('-l', '--list', action='store_true', dest='list', help='list all items')
 	return argparser.parse_args()
 
 def main():
@@ -50,6 +56,9 @@ def main():
 	if args.capec:
 		cwe_path = os.path.dirname(os.path.abspath(__file__)) + '/capec.xml'
 		nvdview = []
+	if args.CuuuuuuE:
+		cwe_path = os.path.dirname(os.path.abspath(__file__)) + '/cuue.xml'
+		nvdview = [] # 10 usability heuristics by Jakob Nielsen
 	if not os.path.isfile(cwe_path):
 		print('CWE: Download https://cwe.mitre.org/data/xml/cwec_latest.xml.zip, then extract it as cwec.xml.')
 		print('CAPEC: Download https://capec.mitre.org/data/xml/capec_latest.xml, then place it as capec.xml.')
@@ -93,6 +102,8 @@ def main():
 		children(args.children)
 	elif args.keyword != None:
 		grepi(args.keyword)
+	elif args.list != None:
+		list()
 
 if __name__ == "__main__":
 	main()
