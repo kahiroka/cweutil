@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Weakness_Catalog Name="Common User-Unfriendly Enumeration" Version="0.01" Date="2025-01-01" xmlns="http://kahiroka.net/cuue-1">
+   <Weaknesses>
+      <Weakness ID="100" Name="Effectiveness" Abstraction="Class" Structure="Simple" Status="Draft">
+         <Description>Issues that prevent the achievement of goals.</Description>
+         <Related_Weaknesses>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="101" Name="Ambiguous Goal Definition" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Description>The user does not understand the goal.</Description>
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="100" View_ID="100" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="102" Name="Insufficient Feedback" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Description>The system does not clearly indicate the current state of the system.</Description>
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="100" View_ID="100" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="103" Name="Invisible System State (JD1)" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Description>The user does not know what to do next.</Description>
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="100" View_ID="100" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="200" Name="Efficiency" Abstraction="Class" Structure="Simple" Status="Draft">
+         <Description>Issues that increase the time and effort required to perform a task.</Description>
+         <Related_Weaknesses>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="201" Name="Redundant Workflow Steps" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Description>More steps are required than necessary.</Description>
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="200" View_ID="100" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="202" Name="Ineffecient Information Access (JD10)" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Description>It takes time to find the information you need.</Description>
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="200" View_ID="100" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="203" Name="Lack of Shortcuts (JD7)" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Description>Not sure of available shortcuts.</Description>
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="200" View_ID="100" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="204" Name="High response latency" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Description>High response latency causes inefficiencies and frustrates users.</Description>
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="200" View_ID="100" Ordinal="Primary"/>
+            <Related_Weakness Nature="ChildOf" CWE_ID="300" View_ID="100" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="300" Name="Satisfaction" Abstraction="Class" Structure="Simple" Status="Draft">
+         <Description>Factors that cause discomfort and confusion when using the system.</Description>
+         <Related_Weaknesses>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="301" Name="Stressful Error Notification" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Description>Error notifications are unfriendly or aggressive.</Description>
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="300" View_ID="100" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="302" Name="Cluttered User Interface (JD8)" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Description>Too much information and functionality is crammed into the system.</Description>
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="300" View_ID="100" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="303" Name="Lack of Intuitive Design (JD6)" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Description>Users cannot understand how to use it naturally.</Description>
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="300" View_ID="100" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="304" Name="Exposure of Internal States" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Description>Exposure of overly complex internal states or structure to the interface</Description>
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="300" View_ID="100" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="400" Name="Error Handling (JD9)" Abstraction="Class" Structure="Simple" Status="Draft">
+         <Description>Design issues that encourage users to make errors or make recovery difficult.</Description>
+         <Related_Weaknesses>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="401" Name="Misleading Error Messages" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Description>The user misunderstands the cause of the issues.</Description>
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="400" View_ID="100" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="402" Name="Lack of Error Prevention (JD5)" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Description>There is no mechanism to prevent input or selection errors.</Description>
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="400" View_ID="100" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="403" Name="Lack of Recoverability (JD3)" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Description>Cannot easily recover from errors.</Description>
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="400" View_ID="100" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="500" Name="Accessibility" Abstraction="Class" Structure="Simple" Status="Draft">
+         <Description>Designed to be difficult to use for certain user groups (e.g., visually impaired, novices).</Description>
+         <Related_Weaknesses>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="501" Name="Lack of Visual Accessibility Features" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Description>Contrast too low, no alternative text.</Description>
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="500" View_ID="100" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="502" Name="Restricted Keyboard Navigation" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Description>Difficult to operate with just a keyboard.</Description>
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="500" View_ID="100" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="503" Name="Lack of Multilingual Support" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Description>Insufficient multilingual support.</Description>
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="500" View_ID="100" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="600" Name="Consistency and Standards (JD4)" Abstraction="Class" Structure="Simple" Status="Draft">
+         <Description>The issue of UI design being contrary to industry standards and internal consistency.</Description>
+         <Related_Weaknesses>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="601" Name="Inconsistent Terminology (JD2)" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Description>They use different names for the same concept.</Description>
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="600" View_ID="100" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="602" Name="Ignoring Standard Design Guidelines" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Description>Ignores industry standards (e.g., material design).</Description>
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="600" View_ID="100" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="603" Name="Unpredictable Behavior" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Description>System behaves in an unexpected way.</Description>
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="600" View_ID="100" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+      <Weakness ID="604" Name="Inconsistent User Unterface" Abstraction="Base" Structure="Simple" Status="Draft">
+         <Description>Bind different interface for each subject.</Description>
+         <Related_Weaknesses>
+            <Related_Weakness Nature="ChildOf" CWE_ID="600" View_ID="100" Ordinal="Primary"/>
+         </Related_Weaknesses>
+      </Weakness>
+   </Weaknesses>
+</Weakness_Catalog>
