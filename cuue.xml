@@ -152,7 +152,7 @@
             <Related_Weakness Nature="ChildOf" CWE_ID="600" View_ID="100" Ordinal="Primary"/>
          </Related_Weaknesses>
       </Weakness>
-      <Weakness ID="604" Name="Inconsistent User Unterface" Abstraction="Base" Structure="Simple" Status="Draft">
+      <Weakness ID="604" Name="Inconsistent User Interface" Abstraction="Base" Structure="Simple" Status="Draft">
          <Description>Bind different interface for each subject.</Description>
          <Related_Weaknesses>
             <Related_Weakness Nature="ChildOf" CWE_ID="600" View_ID="100" Ordinal="Primary"/>
